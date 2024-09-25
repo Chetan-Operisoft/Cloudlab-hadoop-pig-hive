@@ -51,7 +51,7 @@ resource "aws_key_pair" "master-key-pair" {
 # Exploitable Windows - HADOOP
 resource "aws_instance" "Window_HADOOP" {
   ami           = "ami-0a7fe72c49dbc86db"  # Replace with your desired AMI ID
-  instance_type = "c6a.2xlarge"  # Replace with your desired instance type
+  instance_type = "m6a.xlarge"  # Replace with your desired instance type
   key_name      = aws_key_pair.master-key-pair.key_name
   subnet_id     = "subnet-0fd31cfc06b1857a4"
   availability_zone = "ap-south-1a"
